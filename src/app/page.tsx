@@ -1,7 +1,8 @@
 "use client";
 
-import { TodoForm } from "./components/todoform";
+import { TodoForm } from "./components/new-todoform";
 import { TodoList } from "./components/todolist";
+import { Generate } from "./components/generate-todos";
 import { Authenticated, Unauthenticated, AuthLoading } from "convex/react";
 
 import { useQuery } from "convex/react";
@@ -29,6 +30,7 @@ export default function Home() {
             <UserButton />
           </div>
           {todos ? <TodoList /> : <p>No todos available</p>}
+          <Generate />
           <TodoForm />
         </div>
       </Authenticated>
